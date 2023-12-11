@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const SearchBar = ({ onSearch }) => {
   const [searchQuery, setsearchQuery] = useState("");
-  const search = <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" style={{color: "#ffffff",}} />
+  const search = (
+    <FontAwesomeIcon
+      icon={faMagnifyingGlass}
+      size="lg"
+      style={{ color: "#ffffff" }}
+    />
+  );
   const handleInputChange = (e) => {
     setsearchQuery(e.target.value);
   };

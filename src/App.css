@@ -1,11 +1,12 @@
 :root[data-theme="dark"] {
   --text: #f8f9fc;
   --background: #030407;
-  --primary: #475fae;
+  --primary: #0d42ee;
   --secondary: #0f1424;
   --accent: #4a63b5;
 }
-body,html{
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -13,12 +14,11 @@ body,html{
 .app-container {
   display: flex;
   flex-direction: column;
-  height:100%;
+  height: 100%;
   text-align: center;
 }
-
 .searchbar {
-  height: auto;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,7 +56,8 @@ body,html{
 }
 .searchbar input[type="text"],
 .searchbar button {
-  height: 4vh;
+  height: 8vh;
+  color: black;
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -69,8 +70,12 @@ body,html{
   }
 
   .searchbar input[type="text"] {
-    width: 90vw;
+    width: 100vw;
     margin-bottom: 10px;
+  }
+
+  .searchbar button {
+    width: 90vw; /* Set the button width to occupy full width */
   }
 }
 
@@ -103,7 +108,7 @@ body,html{
     transform: rotate(360deg);
   }
 }
-.weather-data{
+.weather-data {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,19 +120,21 @@ body,html{
   font-size: 4rem;
 }
 
-#temp_main{
+#temp_main {
   font-size: 3.4rem;
   cursor: pointer;
-  color: #4a63b5;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #8b5cf6, #22d3ee, #10b981);
 }
 
-#temp{
+#temp {
   font-size: 2.5rem;
 }
-#conditiontext{
+#conditiontext {
   font-size: 1.5rem;
 }
-.footer{
+.footer {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -140,7 +147,7 @@ body,html{
   font-size: 20px;
   font-weight: 500;
 }
-.footer a{
+.footer a {
   text-decoration: none;
   color: #475fae;
 }
